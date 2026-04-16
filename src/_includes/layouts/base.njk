@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ lang | default(site.defaultLang) }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }} - {{ site.artist }}</title>
+    <meta name="description" content="{{ description or site.artist }}">
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    {% set copy = i18n[lang] %}
+    {% set isEn = lang == "en" %}
+    <div class="scanline"></div>
+    <header class="site-header frame">
+      <a class="brand" href="{{ '/en/' if isEn else '/' }}">
+        <img src="/assets/logos/Logo_DAR_white_01.svg" alt="Logo darokin">
+        <span>{{ site.artist }}</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/en/' if isEn else '/' }}">{{ copy.nav.home }}</a>
+        <a href="{{ '/en/exhibitions/' if isEn else '/expositions/' }}">{{ copy.nav.exhibitions }}</a>
+        <a href="{{ '/en/artworks/' if isEn else '/oeuvres/' }}">{{ copy.nav.artworks }}</a>
+      </nav>
+      <a class="lang-switch" href="{{ '/' if isEn else '/en/' }}">{{ copy.langSwitch }}</a>
+    </header>
+    <main class="container">{{ content | safe }}</main>
+    <footer class="site-footer frame">
+      <p>darokin - computer artist - Reims</p>
+    </footer>
+  </body>
+</html>

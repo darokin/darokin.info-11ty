@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+lang: fr
+title: Expositions
+permalink: /expositions/index.html
+---
+<section class="panel frame">
+  <p class="meta">Archive</p>
+  <h1>Expositions</h1>
+  <div class="grid">
+    {% for expo in collections.exhibitions | byLang("fr") %}
+      <article class="card">
+        <p class="meta">{{ expo.data.period }}</p>
+        <h2><a href="{{ expo.url }}">{{ expo.data.title }}</a></h2>
+        <p>{{ expo.data.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

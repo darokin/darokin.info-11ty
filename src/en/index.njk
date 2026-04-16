@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+lang: en
+title: darokin
+description: Portfolio of darokin, underground computer artist
+permalink: /en/index.html
+---
+{% set copy = i18n.en %}
+<section class="hero frame">
+  <p class="meta">{{ copy.hero.label }}</p>
+  <h1>darokin</h1>
+  <p>
+    Darokin (Adrien Rebuzzi) is a visual artist and programmer based in Reims, rooted in the early 90s computer underground culture (hack/warez/demoscene). Since 2007, he has developed a practice around pixel art, ASCII art and creative coding, often embodied through sculptures, installations and digital prints. Working exclusively on Linux with free software or custom-built tools, he explores the links between code, memory of early computers and contemporary forms. His works question the place of digital and spiritual dimensions in our lives while preserving a playful and poetic tone.
+  </p>
+  <div class="social">
+    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram @darokin</a>
+    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<section class="panel frame">
+  <div class="grid">
+    <article class="card">
+      <p class="meta">Section</p>
+      <h2>{{ copy.nav.exhibitions }}</h2>
+      <p>Archive of exhibitions, installations and collaborations.</p>
+      <a href="/en/exhibitions/">{{ copy.hero.ctaExhibitions }}</a>
+    </article>
+    <article class="card">
+      <p class="meta">Section</p>
+      <h2>{{ copy.nav.artworks }}</h2>
+      <p>Selection of artworks and generative projects.</p>
+      <a href="/en/artworks/">{{ copy.hero.ctaArtworks }}</a>
+    </article>
+  </div>
+</section>

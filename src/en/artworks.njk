@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+lang: en
+title: Artworks
+permalink: /en/artworks/index.html
+---
+<section class="panel frame">
+  <p class="meta">Catalogue</p>
+  <h1>Artworks</h1>
+  <div class="grid">
+    {% for artwork in collections.artworks | byLang("en") %}
+      <article class="card">
+        <p class="meta">{{ artwork.data.year }}</p>
+        <h2><a href="{{ artwork.url }}">{{ artwork.data.title }}</a></h2>
+        <p>{{ artwork.data.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
