@@ -1,0 +1,32 @@
+# Dépendances
+node_modules/
+
+# Build output 11ty
+dist/
+_site/
+public/
+
+# Cache éventuel
+.cache/
+.tmp/
+temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Fichiers système / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.cursor/
+
+# Variables d'environnement
+.env
+.env.*
+!.env.example
