@@ -3,8 +3,6 @@ node_modules/
 
 # Build output 11ty
 dist/
-_site/
-public/
 
 # Cache éventuel
 .cache/
